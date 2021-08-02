@@ -6,7 +6,7 @@ ENV CGO_ENABLED=0
 ENV GO_EXTRA_BUILD_ARGS="-a -installsuffix cgo"
 
 RUN apk add --no-cache ca-certificates make
-RUN apk add --no-cache git bash
+RUN apk add --no-cache git
 
 RUN mkdir -p $PROJECT_PATH
 COPY . $PROJECT_PATH
