@@ -38,4 +38,4 @@ jobs:
 
         run: |
               docker login registry.lab.sprybts.net --username "${{ secrets.SPRY_LAB_REGISTRY_USERNAME }}" --password "${{ secrets.SPRY_LAB_REGISTRY_PASSWORD }}"
-              docker buildx build --platform linux/armv6 -f Dockerfile-armv6 -t registry.lab.sprybts.net/himb-gateway:${{ env.MY_TAG }} --push .
+              docker buildx build --platform linux/arm/v6 -f Dockerfile-armv6 -t registry.lab.sprybts.net/himb-gateway:${{ env.MY_TAG }} --push .
