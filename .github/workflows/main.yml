@@ -40,5 +40,8 @@ jobs:
               docker login registry.lab.sprybts.net --username "${{ secrets.SPRY_LAB_REGISTRY_USERNAME }}" --password "${{ secrets.SPRY_LAB_REGISTRY_PASSWORD }}"
               echo '----'
               docker ps -a
+              docker images
+              echo '----'
+              update-binfmts --enable
               echo '----'
               docker buildx build --platform linux/arm/v6 -f Dockerfile-armv6 -t registry.lab.sprybts.net/himb-gateway:${{ env.MY_TAG }} --push .
