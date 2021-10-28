@@ -37,5 +37,5 @@ jobs:
         name: Build and push container
 
         run: |
-              docker login registry.lab.sprybts.net --username "${{ secrets.SPRY_LAB_REGISTRY_USERNAME }}" --password "${{ secrets.SPRY_LAB_REGISTRY_PASSWORD }}"
-              docker buildx build --platform linux/arm/v6 -f Dockerfile-armv6 -t registry.lab.sprybts.net/himb-gateway:${{ env.MY_TAG }} --push .
+              docker login registry.lab.howismyboat.com --username "${{ secrets.SPRY_LAB_REGISTRY_USERNAME }}" --password "${{ secrets.SPRY_LAB_REGISTRY_PASSWORD }}"
+              docker buildx build --platform linux/arm/v6 -f Dockerfile-armv6 -t registry.lab.howismyboat.com/himb-gateway:${{ env.MY_TAG }} --push .
